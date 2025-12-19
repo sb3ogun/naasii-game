@@ -1,24 +1,51 @@
 # Naasii Dice Game - Python Implementation
 
-## Game Description
-Python implementation of Naasii, a dice game from Coyote & Crow, created by Kenna Alexander (https://www.coyoteandcrow.net).
+## Overview
+This is a Python implementation of **Naasii**, a dice game from Coyote & Crow created by **Kenna Alexander** (https://www.coyoteandcrow.net). The game features 12 dice, 2-4 players, and multiple scoring combinations across several rounds.
+
+## Project Information
+- **Student Name**: Oluwatobi Ogundipe
+- **Directory ID**: sb3ogun
+- **Email**: sb3ogun@terpmail.umd.edu
+- **Course**: INST126 - Introduction to Programming for Information Science
+- **University**: University of Maryland, College Park
 
 ## Features Implemented
-- 12-dice gameplay with 3 rolls per turn
-- 2-4 player support
-- Enhanced scoring system
-- Save/load game functionality
-- Visualizations with matplotlib/seaborn
-- Statistics tracking
-- Multiple game modes
 
-## How to Run
+###  Core Game Features
+- **12-dice gameplay** following official Naasii rules
+- **2-4 player support** with customizable names
+- **3 rolls per turn** with dice keeping mechanics
+- **Scoring system** based on dice combinations (pairs, triples, straights)
+- **Multiple rounds** (configurable, default: 10)
+- **Turn-based gameplay** with clear player rotation
+
+### Enhanced Features
+- **Save/Load functionality** - Continue games later
+- **Data visualizations** - Score progression charts
+- **Statistics tracking** - Player performance metrics
+- **Strategy suggestions** - AI-driven dice keeping advice
+- **Game configuration** - Customizable settings
+- **Multiple game modes** - Basic and enhanced versions
+
+### Technical Features
+- **Modular design** with separate modules for dice, players, scoring, etc.
+- **Unit tests** for core game logic
+- **Error handling** and input validation
+- **Clean user interface** with clear prompts
+- **Cross-platform compatibility** (Windows, macOS, Linux)
+
+## Installation
+
+### Prerequisites
+- Python 3.7 or higher
+- Git (for cloning repository)
+
+### Setup
 ```bash
+# Clone the repository
+git clone https://github.com/sb3ogun/naasii-game.git
+cd naasii-game
+
 # Install dependencies
 pip install -r requirements.txt
-
-# Run enhanced version (recommended)
-python enhanced_naasii.py
-
-# Run basic version
-python naasii_game.py

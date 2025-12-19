@@ -1,8 +1,4 @@
-# ============================================
-# STEP 3: Create clean naasii_game.py
-# ============================================
-
-clean_game_content = '''"""
+"""
 Naasii Dice Game - Clean Implementation
 Official 12-dice version without icons
 """
@@ -68,12 +64,12 @@ class NaasiiGame:
     
     def play_round(self):
         """Play a single round"""
-        print("\\n" + "=" * 40)
+        print("\n" + "=" * 40)
         print(f"ROUND {self.current_round}")
         print("=" * 40)
         
         for player in self.players:
-            print(f"\\n{player.name}'s turn")
+            print(f"\n{player.name}'s turn")
             print("-" * 30)
             
             self.play_turn(player)
@@ -102,7 +98,7 @@ class NaasiiGame:
         # Additional rolls
         roll_num = 2
         while self.dice_set.rolls_remaining > 0:
-            print(f"\\nRoll {roll_num} - Rolls remaining: {self.dice_set.rolls_remaining}")
+            print(f"\nRoll {roll_num} - Rolls remaining: {self.dice_set.rolls_remaining}")
             
             # Show analysis
             analysis = self.score_calculator.analyze_dice(dice_values)
@@ -170,7 +166,7 @@ class NaasiiGame:
         # Use numpy for analysis
         dice_array = np.array(dice_values)
         
-        print("\\nDice Analysis:")
+        print("\nDice Analysis:")
         print(f"  Total: {np.sum(dice_array)}")
         print(f"  Average: {np.mean(dice_array):.2f}")
         print(f"  Standard Deviation: {np.std(dice_array):.2f}")
@@ -178,18 +174,18 @@ class NaasiiGame:
         # Calculate score
         score_result = self.score_calculator.calculate_score(dice_values)
         
-        print("\\nScoring Result:")
+        print("\nScoring Result:")
         print(f"  Category: {score_result['category'].replace('_', ' ').title()}")
         print(f"  Score: {score_result['score']} points")
         
         # Apply score
         player.add_score(self.current_round, score_result['score'], score_result['category'])
         
-        print(f"\\n{player.name}'s total: {player.score} points")
+        print(f"\n{player.name}'s total: {player.score} points")
     
     def display_standings(self):
         """Display current standings"""
-        print("\\nCurrent Standings:")
+        print("\nCurrent Standings:")
         print("-" * 40)
         
         # Sort by score
@@ -208,16 +204,16 @@ class NaasiiGame:
     
     def display_final_results(self):
         """Display final results"""
-        print("\\n" + "=" * 60)
+        print("\n" + "=" * 60)
         print("GAME OVER - FINAL RESULTS")
         print("=" * 60)
         
         # Sort players
         sorted_players = sorted(self.players, key=lambda p: p.score, reverse=True)
         
-        print("\\nFinal Standings:")
+        print("\nFinal Standings:")
         for i, player in enumerate(sorted_players, 1):
-            print(f"\\n{i}. {player.name}")
+            print(f"\n{i}. {player.name}")
             print(f"   Total Score: {player.score}")
             
             # Show statistics
@@ -228,12 +224,12 @@ class NaasiiGame:
                 if stats['best_category']:
                     print(f"   Best Category: {stats['best_category']}")
         
-        print("\\n" + "*" * 40)
+        print("\n" + "*" * 40)
         print(f"WINNER: {sorted_players[0].name}")
         print("*" * 40)
         
         # Game statistics
-        print("\\nGame Statistics:")
+        print("\nGame Statistics:")
         print(f"  Total Rounds: {self.current_round - 1}")
         print(f"  Total Rolls: {self.game_stats['total_rolls']}")
         
@@ -247,7 +243,7 @@ class NaasiiGame:
         """Main game loop"""
         self.game_stats['start_time'] = time.time()
         
-        print("\\nStarting game...")
+        print("\nStarting game...")
         print(f"Total rounds: {self.max_rounds}")
         print("=" * 40)
         
@@ -257,18 +253,18 @@ class NaasiiGame:
                 self.play_round()
                 
                 if round_num < self.max_rounds:
-                    print("\\n" + "-" * 40)
+                    print("\n" + "-" * 40)
                     cont = input("Continue to next round? (y/n): ").lower().strip()
                     if cont != 'y':
-                        print("\\nEnding game early.")
+                        print("\nEnding game early.")
                         break
             
             self.display_final_results()
             
         except KeyboardInterrupt:
-            print("\\nGame interrupted.")
+            print("\nGame interrupted.")
         except Exception as e:
-            print(f"\\nError: {e}")
+            print(f"\nError: {e}")
 
 
 def main():
@@ -281,7 +277,7 @@ def main():
     print("=" * 60)
     
     # Check dependencies
-    print("\\nChecking dependencies...")
+    print("\nChecking dependencies...")
     try:
         import numpy
         import pandas
@@ -297,18 +293,12 @@ def main():
         game.setup_players()
         game.run()
     except KeyboardInterrupt:
-        print("\\nGame terminated.")
+        print("\nGame terminated.")
     except Exception as e:
-        print(f"\\nError: {e}")
+        print(f"\nError: {e}")
     finally:
-        print("\\nThank you for playing Naasii!")
+        print("\nThank you for playing Naasii!")
 
 
 if __name__ == "__main__":
     main()
-'''
-
-with open(os.path.join(project_name, "naasii_game.py"), 'w', encoding='utf-8') as f:
-    f.write(clean_game_content)
-
-print("Created: naasii_game.py")

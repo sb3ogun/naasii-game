@@ -1,4 +1,3 @@
-# Create requirements.txt
 requirements_content = '''# Required packages for Naasii Dice Game
 # Final Project - INST126
 # Student: Oluwatobi Ogundipe

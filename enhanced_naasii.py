@@ -1,6 +1,5 @@
 """
-Enhanced Naasii Game - Clean Professional Version
-Includes all advanced features without icons
+Enhanced Naasii Game
 """
 
 import time

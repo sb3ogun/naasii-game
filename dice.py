@@ -1,6 +1,5 @@
 """
 Dice module for Naasii game
-Official implementation with 12 dice
 """
 
 import random

@@ -1,6 +1,5 @@
 """
-Visualization module using matplotlib and seaborn
-For Advanced Topics points
+Visualization module using 
 """
 
 import matplotlib.pyplot as plt
