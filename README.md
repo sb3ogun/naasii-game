@@ -5,7 +5,7 @@ This is a Python implementation of **Naasii**, a dice game from Coyote & Crow cr
 
 ## Project Information
 - **Student Name**: Oluwatobi Ogundipe
-- **Directory ID**: sb3ogun
+- **Directory ID**: 121296832
 - **Email**: sb3ogun@terpmail.umd.edu
 - **Course**: INST126 - Introduction to Programming for Information Science
 - **University**: University of Maryland, College Park
